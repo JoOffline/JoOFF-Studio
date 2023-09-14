@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  
+}
+table {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+  width: 50%;
+  height: 9cm;
+  border: 1px solid #222;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0,0,0,9);
+  background-color: #222;
+   /* Aktifkan scroll */
+  
+}
+
+
+tr {
+  transition: all .2s ease-in;
+  cursor: pointer;
+  
+}
+
+th , td {
+  position: relative;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+
+#header {
+  background-color: #c149f1;
+  color: transparent;
+}
+
+h1 {
+  font-weight: 600;
+  text-align: center;
+  background-color: #c149f1;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+tr:hover {
+  background-color: rgba(94, 255, 0, 0.596);
+  transform: scale(1.02);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+section 
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+section::before 
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#222222,#0f0,#222222);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate 
+{
+  0%
+  {
+    transform: translateY(-100%);
+  }
+  100%
+  {
+    transform: translateY(100%);
+  }
+}
+section span 
+{
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background: #181818;
+  z-index: 2;
+  transition: 1.5s;
+}
+section span:hover 
+{
+  background: #0f0;
+  transition: 0s;
+}
+
+section .tabel
+{
+  position: absolute;
+  width: 100%; 
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.dian{
+  overflow-y: scroll;
+  display: block;
+  width: 77.5%;
+}
+
+section .tabel .content{
+  
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+  
+}
+.dian tr th{
+  font-size: 25px;
+  color: #aaa;
+}
+.dian tr td{
+  font-size: 20px;
+  color: #fff;
+}
+
+
+.tabel .content .dian .inputBox input[type="submit"]
+{
+  position: relative;
+  display: flex;
+  padding: 10px;
+  background: rgb(255, 0, 0);
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+.logout-btn {
+  margin-top: 15%;
+  margin-left: 12%;
+  position: absolute;
+  font-family: Hack, monospace;
+  background: #d3d3d3;
+  color: #2c2c2c;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  min-width: 150px;
+  z-index: 999;
+
+  &::after {
+    content: "\f2f5";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    left: 80%;
+    top: 54%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: rgb(255, 0, 0);
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #ff000061;
+    color: #ffffff;
+    
+    }
+    
+}
+
+
+.table-scroll {
+  color: white;
+
+}
